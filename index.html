@@ -199,6 +199,12 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author site-overview-item animated">
@@ -250,7 +256,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/post/4a17b156.html">
+    <link itemprop="mainEntityOfPage" href="http://example.com/post/e04653fd.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -263,7 +269,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/4a17b156.html" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/post/e04653fd.html" class="post-title-link" itemprop="url">linux挂载windows共享文件夹</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,8 +279,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-15 23:29:47" itemprop="dateCreated datePublished" datetime="2021-04-15T23:29:47+08:00">2021-04-15</time>
+      <time title="创建时间：2021-04-16 20:47:40 / 修改时间：21:47:38" itemprop="dateCreated datePublished" datetime="2021-04-16T20:47:40+08:00">2021-04-16</time>
     </span>
 
   
@@ -287,19 +294,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <div class="note info"><h4 id="windows下新建共享文件夹8000"><a href="#windows下新建共享文件夹8000" class="headerlink" title="windows下新建共享文件夹8000"></a>windows下新建共享文件夹8000</h4><h4 id="CentOS下执行命令"><a href="#CentOS下执行命令" class="headerlink" title="CentOS下执行命令"></a>CentOS下执行命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;mnt&#x2F;sss</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbclient  -L  &#x2F;&#x2F;192.168.100.100&#x2F; -U First_EIE</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a><br>The End</p>
+<h4 id="将8000挂载到-mnt-sss"><a href="#将8000挂载到-mnt-sss" class="headerlink" title="将8000挂载到/mnt/sss"></a>将8000挂载到/mnt/sss</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t cifs -o username&#x3D;FirstEIE,password&#x3D;EIE_MPS  &#x2F;&#x2F;192.168.100.100&#x2F;8000  &#x2F;mnt&#x2F;sss</span><br></pre></td></tr></table></figure>
+<h4 id="开机启动挂载"><a href="#开机启动挂载" class="headerlink" title="开机启动挂载"></a>开机启动挂载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
+<h4 id="将下面代码写入"><a href="#将下面代码写入" class="headerlink" title="将下面代码写入"></a>将下面代码写入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;192.168.100.100&#x2F;8000 &#x2F;mnt&#x2F;8000 cifs username&#x3D;FirstEIE,password&#x3D;EIE_MPS 0 0</span><br></pre></td></tr></table></figure></div>
 
       
     </div>

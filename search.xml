@@ -4,13 +4,19 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="post/4a17b156.html"/>
-      <url>post/4a17b156.html</url>
+      <title>linux挂载windows共享文件夹</title>
+      <link href="post/e04653fd.html"/>
+      <url>post/e04653fd.html</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a><br>The End</p>]]></content>
+        <content type="html"><![CDATA[<div class="note info"><h4 id="windows下新建共享文件夹8000"><a href="#windows下新建共享文件夹8000" class="headerlink" title="windows下新建共享文件夹8000"></a>windows下新建共享文件夹8000</h4><h4 id="CentOS下执行命令"><a href="#CentOS下执行命令" class="headerlink" title="CentOS下执行命令"></a>CentOS下执行命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;mnt&#x2F;sss</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbclient  -L  &#x2F;&#x2F;192.168.100.100&#x2F; -U First_EIE</span><br></pre></td></tr></table></figure><h4 id="将8000挂载到-mnt-sss"><a href="#将8000挂载到-mnt-sss" class="headerlink" title="将8000挂载到/mnt/sss"></a>将8000挂载到/mnt/sss</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t cifs -o username&#x3D;FirstEIE,password&#x3D;EIE_MPS  &#x2F;&#x2F;192.168.100.100&#x2F;8000  &#x2F;mnt&#x2F;sss</span><br></pre></td></tr></table></figure><h4 id="开机启动挂载"><a href="#开机启动挂载" class="headerlink" title="开机启动挂载"></a>开机启动挂载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure><h4 id="将下面代码写入"><a href="#将下面代码写入" class="headerlink" title="将下面代码写入"></a>将下面代码写入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;192.168.100.100&#x2F;8000 &#x2F;mnt&#x2F;8000 cifs username&#x3D;FirstEIE,password&#x3D;EIE_MPS 0 0</span><br></pre></td></tr></table></figure></div>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> linux共享 </tag>
+            
+        </tags>
       
     </entry>
     
